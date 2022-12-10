@@ -1,0 +1,629 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #fff;
+    --secondary-color: rgb(20, 88, 214);
+    --dark-color: #000;
+    --text-shadow-grey: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+a{
+    text-decoration: none;
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+.header{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;
+    padding: 0 10px;
+}
+.navbar a{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.navbar .menu{
+    transform: translateX(0);
+}
+.link{
+    position: relative;
+    padding: 0 0 10px;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: all .5s;
+}
+.link:hover::after{
+    width: 100%;
+    transform-origin: right;
+}
+.section-a{
+    height: 450px;
+    background: url('./images/croatia-main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 100px 100px;
+}
+.text-inner{
+    max-width: 50%;
+    line-height: 1.5;
+}
+.text-inner h1{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-shadow: var(--text-shadow-grey);
+}
+.text-inner p{
+    color: var(--primary-color);
+    margin: 25px 0;
+    text-shadow: var(--text-shadow-grey);
+}
+.btn{
+    display: inline-block;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: .85rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.btn.primary{
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+.btn.secondary{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.btn.dark{
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+}
+.burger{
+    width: 30px;
+    aspect-ratio: 1/1;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+}
+.burger span{
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--dark-color);
+}
+
+.section-b{
+    margin-top: 100px;
+}
+.grid{
+    display: grid;
+    height: 100%;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+}
+.grid.c2{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid.r2{
+    grid-template-rows: repeat(2,1fr);
+}
+.grid.c3{
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-inside{
+    border-radius: 10px;    
+    text-transform: uppercase;
+    width: 100%;
+    position: relative;
+    filter: grayscale(1);
+    transition: all 0.5s;    
+    text-shadow: 1px 1px 1px var(--text-shadow-grey);
+    padding: 100px;
+    text-align: center;
+}
+.flex-inner h5, .flex-inner p{
+    text-shadow: 1px 1px 1px var(--text-shadow-grey);
+}
+.grid-inside:hover{
+    filter: grayscale(0);
+}
+.grid-inside.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grid-inside:nth-child(1){
+    background: url('./images/grid/architecture-main.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--primary-color);
+}
+.grid-inside.gr-span{
+    grid-row: span 2;
+}
+.grid-inside:nth-child(2){
+    background: url('./images/grid/beach.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--primary-color);
+}
+.grid-inside:nth-child(3){
+    background: url('./images/grid/plitvice-lake.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--primary-color);
+}
+.grid-inside h3{
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+.link-page{
+    cursor: pointer;
+}
+.grid-comment img{
+    width: 50%;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.section-c{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.grid-comment{
+    text-align: center;
+}
+.grid-comment h4{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.section-d{
+    position: relative;
+    margin-top: 150px;
+}
+.flex-inner{
+    position: absolute;
+    background: url('./images/flag.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.flex-inner h5{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.flex-inner > div{
+    width: 50%;
+    color: var(--primary-color);
+}
+.footer{
+    background-color: rgb(20, 88, 214);
+}
+.navbar.down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.down a{
+    color: var(--primary-color);
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+.contact ul{
+    list-style: none;
+    line-height: 1.5;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.social-media li{    
+    margin-left: 35px;
+}
+ion-icon {
+    color: var(--primary-color);
+    scale: 2;
+    transition: all 0.5s;
+}
+ion-icon:not(.close-icon):hover{
+    transform: translateY(-5px);
+}
+.footer .container{
+    padding: 150px 0 50px;
+}
+hr{
+    margin: 50px 0;
+}
+.section-e img{
+    width: 100%;
+}
+.webdesign{
+    height: 250px;
+    background-color: coral;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.webdesign h1{
+    text-transform: capitalize;
+}
+.section-e{
+    margin-top: 150px;
+}
+.card{
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: relative;
+}
+.card:hover{ 
+    scale: 1.05;
+} 
+.card-text{
+    padding: 25px 35px;
+    background-color: bisque;
+    color: coral;
+    text-align: center;
+}
+.card-text h5{
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.card-text p{
+    color: rgba(0, 0, 0, 0.5);
+}
+.card img{
+    height: 230px;
+}
+.block-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 150px;
+    color: var(--primary-color);
+}
+.block-section img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    flex: 1;
+}
+.stop-scroll{
+    overflow: hidden;
+}
+.modal{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%; 
+    display: none;
+    align-items: center;
+    justify-content: center;  
+}
+.slider-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slider{
+    width: 50%;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.close{
+    width: 35px;
+    aspect-ratio: 1/1;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 23%;
+    top: 23%;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    opacity: 0;
+}
+.slide.current{
+    opacity: 1;
+}
+.text-inner.flex{
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    background-color: coral;
+}
+.btn#prev{
+    left: 23%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn#next{
+    right: 23%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.round{
+    padding: 0;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;   
+    border: 3px solid var(--primary-color);
+    font-weight: 700;
+}
+.form-container{
+    width: 100%;
+    background-color: coral;
+    color: var(--dark-color);
+    height: auto;
+    border-radius: 10px;
+    padding: 35px;
+    margin: 0 auto;
+}
+form{
+    width: 50%;
+    margin: 0 auto;
+    padding: 35px;
+}
+.row-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.label{
+    bottom: 0;
+    left: 0;
+    color: var(--primary-color);
+}
+input[type=submit]{
+    width: 100%;
+    margin-top: 15px;
+}
+input[type=text],input[type=email],textarea{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid coral;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+form h1{
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.grid-inside:hover h3{
+    animation: move 1s linear;
+}
+@keyframes move{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 600px) {
+    .burger{
+        display: flex;
+    }
+    .navbar .menu{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        top: 100px;
+        background-color: var(--primary-color);
+        z-index: 5;
+        transform: translateX(100%);
+    }
+    .menu.active{
+        transform: translateX(0);
+    }
+    .burger.active{
+        transform: rotateZ(90deg);
+    }
+    .navbar ul li+li{
+        margin-top: 50px;
+    }
+    .grid.c2{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .grid.r2{
+        grid-template-rows: repeat(1,1fr);
+    }
+    .grid.c3{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .flex-inner{
+        padding: 10px 10px;
+        flex-direction: column;
+    }
+    .flex-inner > div{
+        text-align: center;
+        margin-bottom: 25px;
+        width: 100%;
+        color: var(--primary-color);
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .social-media{        
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .section-a{
+        height: auto;
+        padding: 30px 30px;
+        text-align: center;
+    }
+    .text-inner{
+        max-width: 100%;
+        line-height: 1.5;
+    }
+    .grid-inside{
+        padding: 50px 10px;
+    }
+    .navbar.down{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar.down-menu{
+        display: none;
+    }
+    .block-section{        
+        grid-template-columns: 1fr;        
+    }
+    form{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 870px) {
+    .grid.c2{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .grid.r2{
+        grid-template-rows: repeat(1,1fr);
+    }
+    .grid.c3{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .flex-inner{
+        padding: 30px 30px;
+        flex-direction: column;
+    }
+    .flex-inner > div{
+        text-align: center;
+        margin-bottom: 25px;
+        width: 100%;
+        color: var(--primary-color);
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .social-media{        
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .section-a{
+        height: auto;
+        padding: 30px 30px;
+        text-align: center;
+    }
+    .text-inner{
+        max-width: 100%;
+        line-height: 1.5;
+    }
+    .grid-inside{
+        padding: 50px 10px;
+    }
+    .navbar.down{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar.down-menu{
+        display: none;
+    }
+    .block-section{        
+        grid-template-columns: 1fr;        
+    }
+    form{
+        width: 100%;
+    }
+}

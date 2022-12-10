@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Visit Croatia</title>
+</head>
+<body>
+    <header class="header container">
+        <a class="logo" href="index.html">visit croatia</a>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a class="link" href="about.html">about</a></li>
+                <li><a class="link" href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <div id="burger" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="section-a container">
+        <div class="text-inner">
+            <h1>Welcome to Croatia!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Voluptatibus, facilis aperiam dolores nihil aliquid ipsum!</p>
+                <a  id="open-modal"class="btn primary">see more</a>
+            </div>
+            <div class="modal" id="modal"> 
+                <div class="slider-container">
+                    <div class="slider">                    
+                        <div class="slide current" style="background-image: url('./images/slider/architecture1.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/architecture2.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/architecture3.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/architecture4.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/architecture5.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/beach1.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/beach2.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/beach3.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/beach4.jpg');"></div>
+                        <div class="slide" style="background-image: url('./images/slider/beach5.jpg');"></div>                     
+                    </div>
+                    <div class="btn-inner">
+                        <span class="close"><ion-icon class="close-icon" name="close-outline"></ion-icon></span>
+                        <button class="btn dark round" id="prev"><</button>
+                        <button class="btn dark round" id="next">></button>
+                    </div>
+                </div> 
+            </div>
+    </section>    
+    <section class="section-b container">
+        <div class="grid c2 r2">
+            <div class="grid-inside center gr-span">
+                <h3>beautiful Architecture</h3>             
+            </div>            
+            <div class="grid-inside center">
+                <h3>beautiful beaches</h3>
+           </div>
+            <div class="grid-inside center">
+                <h3>beautiful nature</h3>             
+            </div>
+        </div>        
+    </section>
+    <section class="section-c container">
+        <div class="grid c3">
+            <div class="grid-comment">
+                <img src="./images/advantages/friends.jpg" alt="">
+                <h4>Friendly people</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Molestiae at culpa, quaerat ipsum tenetur quis!</p>
+            </div>
+            <div class="grid-comment">
+                <img src="./images/advantages/kitchen.jpg" alt="">
+                <h4>Delicious cuisine</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Molestiae at culpa, quaerat ipsum tenetur quis!</p>
+            </div>
+            <div class="grid-comment">
+                <img src="./images/advantages/ecology.jpg" alt="">
+                <h4>fantastic ecology</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Molestiae at culpa, quaerat ipsum tenetur quis!</p>
+            </div>
+        </div>
+    </section>
+    <section class="section-d container">
+        <div class="flex-inner">
+            <div>
+                <h5>Let's stay in touch<br>contact us</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Molestiae at culpa, quaerat ipsum tenetur quis!</p>
+            </div>
+            <a class="btn primary" href="contact.html">contact us</a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="navbar down">
+                <a class="logo" href="#">visit croatia</a>
+                <nav class="navbar down-menu">
+                    <ul>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr>
+            <div class="contact">
+                <ul class="social-media">
+                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></ion-icon></a></li>
+                </ul>
+            </div>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>
